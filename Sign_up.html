@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Coal Stock Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('r7.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <section class="content">
+        <form action="signup.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </section>
+</body>
+</html>
