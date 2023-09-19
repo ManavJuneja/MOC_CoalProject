@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dependent Dropdowns</title>
+</head>
+<body>
+    <h1>Coal Mine Location</h1>
+    
+    <label for="state">Select a State:</label>
+    <select id="state" onchange="updateCities()">
+        <option value="mp">Madhya Pradesh</option>
+        <option value="assam">Assam</option>
+        <option value="wb">West-Bengal</option>
+        <option value="tel">Telangana</option>
+        <option value="ap">Andhra Pradesh</option>
+        <option value="ch">Chhattishgarh</option>
+        <option value="jhar">Jharkhand</option>
+        <option value="odi">Odisha</option>
+    </select>
+    
+    <label for="city">Select a District:</label>
+    <select id="city">
+        <option value="nyc">New York</option>
+        <option value="la">Los Angeles</option>
+        <option value="toronto">Toronto</option>
+        <option value="vancouver">Vancouver</option>
+        <option value="london">London</option>
+        <option value="manchester">Manchester</option>
+
+        <option value="Anuppur">Anuppur</option>
+        <option value="Balaghat">Balaghat</option>
+        <option value="Barwani">Barwani</option>
+        <option value="Betul">Betul</option>
+        <option value="Bhind">Bhind</option>
+        <option value="Bhopal">Bhopal</option>
+        <option value="Burhanpur">Burhanpur</option>
+        <option value="Chhatarpur">Chhatarpur</option>
+        <option value="Chhindwara">Chhindwara</option>
+        <option value="Damoh">Damoh</option>
+        <option value="Datia">Datia</option>
+        <option value="Dewas">Dewas</option>
+        <option value="Dhar">Dhar</option>
+        <option value="Dindori">Dindori</option>
+        <option value="Gwalior">Gwalior</option>
+        <option value="Indore">Indore</option>
+        <option value="Jabalpur">Jabalpur</option>
+        <option value="Katni">Katni</option>
+        <option value="Khandwa">Khandwa</option>
+        <option value="Mandla">Mandla</option>
+        <option value="Morena">Morena</option>
+        <option value="Narsinghpur">Narsinghpur</option>
+        <option value="Niwari">Niwari</option>
+        <option value="Panna">Panna</option>
+        <option value="Raisen">Raisen</option>
+        <option value="Ratlam">Ratlam</option>
+        <option value="Sagar">Sagar</option>
+        <option value="Satna">Satna</option>
+        <option value="Sehore">Sehore</option>
+        <option value="Shahdol">Shahdol</option>
+        <option value="Shajapur">Shajapur</option>
+        <option value="Shivpuri">Shivpuri</option>
+        <option value="Singrauli">Singrauli</option>
+        <option value="Tikamgarh">Tikamgarh</option>
+        <option value="Umaria">Umaria</option>
+        <option value="Angul">Angul</option>
+        <option value="Bargarh">Bargarh</option>
+        <option value="Deogarh">Deogarh</option>
+        <option value="Jharsuguda">Jharsuguda</option>
+        <option value="Sundargarh">Sundargarh</option>
+        <option value="Talcher">Talcher</option>
+        <option value="Bankura">Bankura</option>
+        <option value="Bardhaman">Bardhaman</option>
+        <option value="Birbhum">Birbhum</option>
+        <option value="Darjeeling">Darjeeling</option>
+        <option value="Jalpaiguri">Jalpaiguri</option>
+        <option value="Paschim Medinipur">Paschim Medinipur</option>
+        <option value="Purba Medinipur">Purba Medinipur</option>
+        <option value="South 24 Parganas">South 24 Parganas</option>
+        <option value="Cachar">Cachar</option>
+        <option value="Darrang">Darrang</option>
+        <option value="Hailakandi">Hailakandi</option>
+        <option value="Karbi Anglong">Karbi Anglong</option>
+        <option value="Karimganj">Karimganj</option>
+        <option value="Nagaon">Nagaon</option>
+        <option value="Sivasagar">Sivasagar</option>
+        <option value="Tinsukia">Tinsukia</option>
+        <option value="Cuddalore">Cuddalore</option>
+        <option value="Karimnagar">Karimnagar</option>
+        <option value="Peddapalli">Peddapalli</option>
+        <option value="Adilabad">Adilabad</option>
+        <option value="Karimnagar">Karimnagar</option>
+        <option value="Khammam">Khammam</option>
+        <option value="Warangal">Warangal</option>
+        <option value="Bilaspur">Bilaspur</option>
+        <option value="Durg">Durg</option>
+        <option value="Jashpur">Jashpur</option>
+        <option value="Korba">Korba</option>
+        <option value="Koriya">Koriya</option>
+        <option value="Raigarh">Raigarh</option>
+        <option value="Surguja">Surguja</option>
+        <option value="Udaipur">Udaipur</option>
+        <option value="Bokaro">Bokaro</option>
+        <option value="Chatra">Chatra</option>
+        <option value="Dhanbad">Dhanbad</option>
+        <option value="Giridih">Giridih</option>
+        <option value="Hazaribagh">Hazaribagh</option>
+        <option value="Koderma">Koderma</option>
+        <option value="Latehar">Latehar</option>
+        <option value="Lohardaga">Lohardaga</option>
+        <option value="Pakur">Pakur</option>
+        <option value="Ramgarh">Ramgarh</option>
+        <option value="Ranchi">Ranchi</option>
+        <option value="Simdega">Simdega</option>
+
+    </select>
+
+    <label for="avilable">Total Available Storage</label>
+    <select name="Available" id="Available">
+        
+
+
+    </select>
+
+
+
+
+    <script>
+        function updateCities() {
+            var countrySelect = document.getElementById("state");
+            var citySelect = document.getElementById("city");
+            
+            // Clear the city dropdown
+            citySelect.innerHTML = "";
+            
+            // Define cities based on the selected country
+            var cities = {};
+            cities.mp = ["Balaghat","Barwani","Betul","Bhind","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori","Gwalior","Indore","Jabalpur","Katni","Khandwa","Mandla","Morena","Narsinghpur","Niwari","Panna","Raisen","Ratlam","Sagar","Satna","Sehore","Shahdol","Shajapur","Shivpuri","Singrauli","Tikamgarh","Umaria"];
+            cities.assam = ["Cachar", "Darrang", "Hailakandi", "Karbi Anglong", "Karimganj", "Nagaon", "Sivasagar", "Tinsukia"];
+            cities.wb = ["Bankura", "Bardhaman", "Birbhum", "Darjeeling", "Jalpaiguri", "Paschim Medinipur", "Purba Medinipur", "South 24 Parganas"];
+            cities.ap=["Adilabad", "Karimnagar", "Khammam", "Warangal"];
+            cities.tel=["Karimnagar","Peddapalli"];
+            cities.ch=["Bilaspur","Durg","Jashpur","Korba","Koriya","Raigarh","Surguja","Udaipur"];
+            cities.jhar=["Bokaro", "Chatra", "Dhanbad", "Giridih", "Hazaribagh", "Koderma", "Latehar", "Lohardaga", "Pakur", "Ramgarh", "Ranchi", "Simdega"];
+            cities.odi=["Angul","Bargarh","Deogarh","Jharsuguda","Sundargarh","Talcher"];
+            // Populate the city dropdown with options from the selected country
+            var selectedCountry = countrySelect.value;
+            cities[selectedCountry].forEach(function(city) {
+                var option = document.createElement("option");
+                option.value = city.toLowerCase();
+                option.text = city;
+                citySelect.appendChild(option);
+            });
+        }
+        
+        // Initialize the city dropdown based on the default country
+        updateCities();
+    </script>
+</body>
+</html>
